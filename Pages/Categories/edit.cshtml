@@ -1,0 +1,29 @@
+﻿@page
+@model WearHouse.Pages.Categories.editModel
+@{
+}
+<div class="center-this">
+    <div class="outer-popup-categories">
+        <div class="popup-categories">
+            <div class="popup-title-container-categories">
+                <p>Edit Category</p>
+                <a class="close-button-categories" id="closeButton" asp-page="product">
+                    X
+                </a>
+            </div>
+            <form method="post" class="popup-form-container-categories" id="editFormCategories">
+                <input hidden asp-for="Category.Id" />
+                <div class="form-top-categories">
+                    <label for="category">Category:</label>
+                    <input type="text" id="category" asp-for="Category.Name" />
+                </div>
+                <span></span>
+                <div class="popup-submit-wrapper-categories">
+                    <button class="submit-popup-button-categories" type="submit">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

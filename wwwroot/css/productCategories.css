@@ -1,0 +1,261 @@
+﻿body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper-categories {
+  padding: 50px 0px 50px 0px;
+}
+
+.container-categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  gap: 20px;
+  width: 95vw;
+}
+
+.content-container-categories {
+  background-color: aqua;
+  /* padding; */
+}
+
+/* button biru atas table */
+.add-button-categories button {
+  background-color: rgb(11, 110, 253);
+  padding: 10px 20px 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+}
+
+/* container luar dari table */
+.table-container-categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-width: 90%;
+  padding: 20px;
+  padding-bottom: 40px;
+  border-radius: 5px;
+  border: 3px solid rgb(0, 0, 0, 0.3);
+  /* background-color: red; */
+}
+
+/* ini bagian tablenya */
+.table-content-categories {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* table row */
+.table-content-categories tr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px;
+  gap: 10vw;
+}
+
+.table-content-categories th,
+.table-content-categories td {
+  display: flex;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.num-column-categories {
+  display: flex;
+  width: 8%;
+}
+
+.category-column-categories {
+  display: flex;
+  width: 30%;
+}
+
+.action-column-categories {
+  display: flex;
+  width: 20px;
+  gap: 5px;
+}
+
+.edit-button-categories {
+  background-color: rgb(255, 191, 1);
+  /* color: white; */
+  padding: 10px 20px 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+}
+.edit-button-categories a {
+  color: white;
+}
+.delete-button-categories {
+  background-color: rgb(220, 53, 69);
+  /* color: white; */
+  padding: 10px 20px 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+}
+.delete-button-categories a {
+  color: white;
+}
+
+/* ---------------------------------- */
+/* popup */
+
+.edit-popup-categories {
+  display: none;
+}
+
+.add-popup-categories {
+  display: none;
+}
+
+.delete-popup-categories {
+  display: none;
+}
+.center-this {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer-popup-categories {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 74.2vh;
+  padding: 20px;
+  gap: 20px;
+}
+
+.ad-popup3-categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 74.2vh;
+  padding: 20px;
+  gap: 20px;
+}
+
+.popup-categories {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  /* height: 35vh; */
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0, 0.4);
+  background-color: white;
+}
+
+.popup-title-container-categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px 20px 15px;
+  border-bottom: 2px solid rgb(0, 0, 0, 0.4);
+  font-size: large;
+}
+
+.close-button-categories {
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.popup-form-container-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-top-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+}
+
+.popup-form-container-categories input {
+  border: 1px solid rgb(0, 0, 0, 0.4);
+  border-radius: 5px;
+  padding: 7px 5px 7px 5px;
+}
+
+.popup-form-container-categories span {
+  width: 96%;
+  margin-left: 2%;
+  border-bottom: 2px solid rgb(0, 0, 0, 0.4);
+}
+
+.popup-submit-wrapper-categories {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.popup-submit-wrapper-categories button {
+  padding: 10px 20px 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+}
+
+.submit-popup-button-categories {
+  background-color: rgb(25, 135, 84);
+}
+
+.delete-popup-button-categories {
+  background-color: rgb(220, 53, 69);
+}
+
+@media (max-width: 600px) {
+  .action-column-categories {
+    display: flex;
+    overflow: nowrap;
+    gap: 5px;
+  }
+
+  .popup-form-container-categories input {
+    padding: 5px;
+  }
+
+  .popup-categories {
+    width: 60vw;
+  }
+
+  .edit-button-categories {
+    padding: 5px 10px 5px 10px;
+    border: none;
+  }
+
+  .delete-button-categories  {
+    padding: 5px 10px 5px 10px;
+    font-size: 13px;
+  }
+
+  .smaller-font-categories {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,78 @@
+﻿@page
+@model WearHouse.Pages.Categories.productModel
+@{
+}
+
+<div class="wrapper-categories">
+    <div class="container-categories">
+        <!-- <div class="content-container-categories"> -->
+        <div class="title">
+            <h1>Product Categories</h1>
+        </div>
+        <div class="add-button-categories">
+            <button onclick="openAddPopup()">Add Category</button>
+        </div>
+        <div class="table-container-categories">
+            <table class="table-content-categories">
+                <thead>
+
+                    <tr>
+                        <th class="num-column-categories">No.</th>
+                        <th class="category-column-categories">Category</th>
+                        <th class="action-column-categories">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{int i = 1;}
+                    @foreach (var obj in Model.Categories)
+                    {
+                        <tr>
+                            <td data-cell="index" class="num-column-categories">
+                                @(i++)
+                            </td>
+                            <td data-cell="category" class="category-column-categories">
+                                @obj.Name
+                            </td>
+                            <td data-cell="action" class="action-column-categories">
+                                <div class="edit-button-categories">
+                                    <a asp-page="edit" asp-route-id="@obj.Id">Edit</a>
+                                </div>
+                                <div class="delete-button-categories">
+                                    <a asp-page="delete" asp-route-id="@obj.Id">
+                                        Delete
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <!-- </div> -->
+    </div>
+
+    
+
+    <div class="outer-popup-categories add-popup-categories">
+        <div class="popup-categories">
+            <div class="popup-title-container-categories">
+                <p>Add Category</p>
+                <button class="close-button-categories" id="closeButton" onclick="closeAddPopup()">
+                    X
+                </button>
+            </div>
+            <form method="post" class="popup-form-container-categories" id="addFormCategories">
+                <div class="form-top-categories">
+                    <label for="category">Category:</label>
+                    <input type="text" id="category" asp-for="Category.Name" required />
+                </div>
+                <span></span>
+                <div class="popup-submit-wrapper-categories">
+                    <button class="submit-popup-button-categories" type="submit">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

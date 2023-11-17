@@ -1,0 +1,52 @@
+﻿@page
+@model WearHouse.Pages.loginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="outer-container-logres">
+    <div class="container-logres default-container-logres">
+        <div class="login-container-logres">
+            <p>Login</p>
+        </div>
+        <div class="credential-container-logres">
+            <div class="left-credential-logres">
+                <div>Email Address</div>
+                <div>Password</div>
+            </div>
+            <div class="right-credential-logres">
+                <form id="login-form">
+                    <div class="input-form-logres">
+                        <input type="text" id="email" name="email" required />
+                        <input type="password" id="password" name="password" required />
+                    </div>
+                    <div class="remember-logres">
+                        <input type="checkbox" id="remember-me" />
+                        <label for="remember-me">Remember Me</label>
+                    </div>
+                    <div class="submit-password-logres">
+                        <button type="submit">Login</button>
+                        <a href="">Forgot password</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-logres popup-container-logres">
+        <div class="popup-logres">
+            <div class="popup-login-container-logres">
+                <h2>Error Login</h2>
+                <p>User does not exist</p>
+                <p>or</p>
+                <p>or wrong credentials</p>
+                <div class="submit-password-logres">
+                    <button type="submit"
+                            id="back-logres"
+                            onclick="closeLoginErrorPopup()">
+                        Back
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

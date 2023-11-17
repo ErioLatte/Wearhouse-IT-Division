@@ -1,0 +1,52 @@
+﻿/* container box login */
+.content-container-dashboard {
+    display: flex;
+    height: 81vh;
+    justify-content: center;
+}
+
+.table-all-dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 50vh; */
+    min-width: 70vw;
+    border-radius: 10px;
+}
+
+/* container buat judul loginnya */
+.title-container-dashboard {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgb(241, 243, 245);
+    border-width: 2px 2px 0 2px;
+    border-style: solid;
+    border-color: rgb(210, 212, 214);
+    border-radius: 5px 5px 0px 0px;
+}
+
+    .title-container-dashboard p {
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+.detail-container-dashboard {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 2px solid rgb(210, 212, 214);
+    border-radius: 0px 0px 5px 5px;
+    background-color: rgb(248, 250, 252);
+}
+
+    .detail-container-dashboard p {
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }

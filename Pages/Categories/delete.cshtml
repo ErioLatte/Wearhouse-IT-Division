@@ -1,0 +1,26 @@
+﻿@page
+@model WearHouse.Pages.Categories.deleteModel
+@{
+}
+<div class="outer-popup-categories">
+    <div class="popup-categories">
+        <div class="popup-title-container-categories">
+            <p>Delete Category</p>
+            <a class="close-button-categories" id="closeButton" asp-page="product">
+                X
+            </a>
+        </div>
+        <form method="post" class="popup-form-container-categories">
+            <div class="form-top-categories smaller-font-categories">
+                This action is irreversible! are you sure you want to delete this
+                category?
+            </div>
+            <span></span>
+            <div class="popup-submit-wrapper-categories">
+                <button class="delete-popup-button-categories" type="submit">
+                    Delete
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

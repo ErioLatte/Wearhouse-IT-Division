@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WearHouse</title>
+    <link rel="stylesheet" href="~/css/aboutUs.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/dashboard.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/loginRegis.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/productCategories.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+</head>
+<body>
+      <nav class="navbar">
+        <div class="logo"><a asp-page="/dashboard">WearHouse</a></div>
+            <ul class="nav-left-container">
+                <li>
+                <a class="menuItem" asp-page="/Categories/product">Category</a>
+                </li>
+                <li><a class="menuItem" asp-page="/aboutUs">About Us</a></li>
+            </ul>
+
+            <ul class="nav-right-container">
+                <li><a class="menuItem" asp-page="/login">Login</a></li>
+                <li><a class="menuItem" asp-page="/register">Register</a></li>
+            </ul>
+
+            <button class="hamburger" onclick="toggleMenu()">
+                <img class="menuIcon burger-icon" src="~/assets/hamburger.svg" alt="hamburger" width="30" height="30" />
+            </button>
+
+            <ul class="burger-dropdown">
+                <li><a asp-page="/Categories/product">Category</a></li>
+                <li><a asp-page="/aboutUs">About Us</a></li>
+                <li><a asp-page="/login">Login</a></li>
+                <li><a asp-page="/register">Register</a></li>
+            </ul>
+    </nav>
+    @RenderBody()
+    <footer>
+        <div class="social-media-container">
+            <a href="/index" class="social-media"><img src="~/assets/facebook.png" alt="Facebook" /></a>
+            <a href="#" class="social-media">
+                <img src="~/assets/twitter.png" alt="Twitter" />
+            </a>
+            <a href="#" class="social-media">
+                <img src="~/assets/instagram.png" alt="Instagram" />
+            </a>
+        </div>
+        <div class="copyright">
+            Copyright &copy;2021 Erio Yoshino. All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="~/js/popup.js"></script>
+    <script src="~/js/script.js"></script>
+    <script src="~/js/login.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/js/register.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

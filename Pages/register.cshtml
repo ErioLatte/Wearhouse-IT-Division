@@ -1,0 +1,41 @@
+﻿@page
+@model WearHouse.Pages.registerModel
+@{
+    ViewData["Title"] = "WearHouse";
+}
+<div class="outer-container-logres">
+    <div class="container-logres">
+        <div class="login-container-logres">
+            <p>Register</p>
+        </div>
+        <div class="credential-container-logres">
+            <div class="left-credential-logres">
+                <div>Name</div>
+                <div>Email Address</div>
+                <div>Password</div>
+                <div>Confirm Password</div>
+            </div>
+            <div class="right-credential-logres">
+                <form id="register-form" method="post">
+                    <div class="input-form-logres">
+                        <input type="text" id="username-register" name="username" required />
+                        <input type="text" id="email-register" name="email" required />
+                        <input type="password" id="password-register" name="password" required />
+                        <input type="password" id="confirm-password-register" name="confirm=password" required />
+                    </div>
+                    <div class="remember-logres">
+                        <input type="checkbox" id="TOC" required/>
+                        <label for="TOC">
+                            By clicking register, i agree to the terms and
+                            conditions.
+                        </label>
+                    </div>
+                    <div class="submit-password-logres">
+                        <button type="submit" onclick="registValidate()">Login</button>
+                        <a href="">Forgot password</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
